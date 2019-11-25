@@ -6,7 +6,7 @@
     android:orientation="vertical"
     android:id="@+id/fragment_id"
     android:background="@color/colorPrimary"
-    tools:context=".MainActivity">
+    tools:context=".movie.view.MainActivity">
 
     <Button
         android:id="@+id/btn_jump"

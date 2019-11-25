@@ -1,4 +1,4 @@
-package com.example.moviesmvvmproject.model
+package com.example.moviesmvvmproject.movie.model
 
 data class MoviesBean(
     val page: Int = 0,

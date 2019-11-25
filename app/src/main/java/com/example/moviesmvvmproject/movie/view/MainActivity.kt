@@ -1,25 +1,16 @@
-package com.example.moviesmvvmproject
+package com.example.moviesmvvmproject.movie.view
 
-import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.TextView
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.moviesmvvmproject.http.ApiCallback
 import com.example.moviesmvvmproject.http.ApiClient
-import com.example.moviesmvvmproject.http.ApiStores
-import com.example.moviesmvvmproject.model.MoviesBean
+import com.example.moviesmvvmproject.movie.model.MoviesBean
+import com.example.moviesmvvmproject.R
 import com.example.moviesmvvmproject.ui.BaseActivity
-import com.example.moviesmvvmproject.ui.MovieAdapter
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.rxkotlin.subscribeBy
 import io.reactivex.schedulers.Schedulers
 import kotlinx.android.synthetic.main.activity_main.*
-import retrofit2.Retrofit
-import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
-import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
 
@@ -33,16 +24,6 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         getResponse()
-
-//        jumpNew()
-
-    }
-
-    private fun jumpNew() {
-        val btnSkip = findViewById<TextView>(R.id.tv_skip)
-        btnSkip.setOnClickListener{
-            startActivity(Intent(this, BlankActivity::class.java))
-        }
     }
 
     private fun getResponse() {
@@ -62,22 +43,20 @@ class MainActivity : BaseActivity() {
     }
 
 
+    /**
+     * implement of the item click listener of recycler view
+     */
     private fun setupRecyclerView() {
         movieRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
             adapter = movieAdapter
             movieAdapter.updateList(movieGlobal.results)
+
+            movieAdapter.onItemClick = {
+                result -> Log.d("hui", result.title)
+            }
         }
     }
-
-
-//    override fun onClick(v: View?) {
-//        when(v?.id){
-//            R.id.tv_skip-> {
-//                startActivity(Intent(this, BlankActivity::class.java))
-//            }
-//        }
-//    }
 
 
 }
