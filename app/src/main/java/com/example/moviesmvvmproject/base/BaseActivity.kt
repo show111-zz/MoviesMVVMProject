@@ -1,4 +1,4 @@
-package com.example.moviesmvvmproject.ui
+package com.example.moviesmvvmproject.base
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

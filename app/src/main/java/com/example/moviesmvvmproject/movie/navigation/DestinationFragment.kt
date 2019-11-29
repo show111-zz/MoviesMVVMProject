@@ -1,4 +1,4 @@
-package com.example.moviesmvvmproject.ui
+package com.example.moviesmvvmproject.movie.navigation
 
 import android.os.Bundle
 import android.view.LayoutInflater

@@ -6,7 +6,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.moviesmvvmproject.ui.MainFragment"
+        android:name="com.example.moviesmvvmproject.movie.navigation.MainFragment"
         android:label="fragment_main"
         tools:layout="@layout/fragment_main">
         <action
@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/destinationFragment"
-        android:name="com.example.moviesmvvmproject.ui.DestinationFragment"
+        android:name="com.example.moviesmvvmproject.movie.navigation.DestinationFragment"
         android:label="fragment_destination"
         tools:layout="@layout/fragment_destination" />
     <argument

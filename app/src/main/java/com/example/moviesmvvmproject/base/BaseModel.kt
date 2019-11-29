@@ -5,7 +5,7 @@ import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable
 import io.reactivex.rxkotlin.addTo
 
-abstract class BaseViewModel  : ViewModel(){
+abstract class BaseModel  : ViewModel(){
 
     private val compositeDisposable = CompositeDisposable()
 
