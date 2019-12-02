@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moviesmvvmproject.R
-import com.example.moviesmvvmproject.movie.data.Result
+import com.example.moviesmvvmproject.movie.di.Result
 import javax.inject.Inject
 
 class MovieAdapter @Inject constructor() : RecyclerView.Adapter<MovieViewHolder>() {

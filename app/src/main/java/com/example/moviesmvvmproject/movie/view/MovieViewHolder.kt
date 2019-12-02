@@ -2,7 +2,7 @@ package com.example.moviesmvvmproject.movie.view
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.example.moviesmvvmproject.movie.data.Result
+import com.example.moviesmvvmproject.movie.di.Result
 import kotlinx.android.synthetic.main.view_movie_list_item.view.*
 
 class MovieViewHolder(movieView: View) : RecyclerView.ViewHolder(movieView) {

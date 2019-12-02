@@ -1,5 +1,11 @@
-package com.example.moviesmvvmproject.movie.data
+package com.example.moviesmvvmproject.movie.di
 
+import androidx.lifecycle.ViewModel
+import com.example.moviesmvvmproject.movie.viewmodel.MovieVM
+import dagger.Binds
+import dagger.Module
+
+@Module
 data class MoviesBean(
     val page: Int = 0,
     val results: List<Result> = emptyList(),
@@ -7,6 +13,7 @@ data class MoviesBean(
     val total_results: Int = 0
 )
 
+@Module
 data class Result(
     val adult: Boolean,
     val backdrop_path: String,
@@ -23,3 +30,10 @@ data class Result(
     val vote_average: Double,
     val vote_count: Int
 )
+
+@Module
+abstract class MovieModule {
+    @Binds
+    abstract fun bindViewModel(vm: MovieVM): ViewModel
+}
+

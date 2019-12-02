@@ -1,6 +1,6 @@
 package com.example.moviesmvvmproject.http
 
-import com.example.moviesmvvmproject.movie.data.MoviesBean
+import com.example.moviesmvvmproject.movie.di.MoviesBean
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query

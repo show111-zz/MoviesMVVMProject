@@ -1,13 +1,14 @@
 package com.example.moviesmvvmproject.http
 
 import com.example.moviesmvvmproject.BuildConfig
+import dagger.Module
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 
-//object声明单例模式
+@Module
 object ApiClient {
 
     fun retrofit(): ApiStores {
