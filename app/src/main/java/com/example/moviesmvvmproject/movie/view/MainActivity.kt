@@ -1,5 +1,6 @@
 package com.example.moviesmvvmproject.movie.view
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -16,6 +17,8 @@ class MainActivity : BaseActivity() {
 //    @Inject
 //    lateinit var movieVM: MovieVM
 
+
+
     private val movieVM = MovieVM(MovieModelImpl())
 
     @Inject
@@ -29,7 +32,12 @@ class MainActivity : BaseActivity() {
 
         movieAdapter = MovieAdapter()
         movieAdapter.onItemClick = {
-                result -> Log.d("hui", result.title)
+                result ->
+                    val intent = Intent(this@MainActivity, MovieDetailActivity::class.java)
+                    intent.putExtra("url_image", result.poster_path)
+                    intent.putExtra("title", result.title)
+                    intent.putExtra("description", result.overview)
+                    startActivity(intent)
         }
         movieRecyclerView.apply {
             layoutManager = LinearLayoutManager(context)
