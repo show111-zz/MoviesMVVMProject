@@ -2,7 +2,6 @@ package com.example.moviesmvvmproject.movie.view
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moviesmvvmproject.R
 import com.example.moviesmvvmproject.base.BaseActivity
@@ -14,17 +13,10 @@ import javax.inject.Inject
 
 class MainActivity : BaseActivity() {
 
-//    @Inject
-//    lateinit var movieVM: MovieVM
-
-
-
     private val movieVM = MovieVM(MovieModelImpl())
 
     @Inject
     lateinit var movieAdapter : MovieAdapter
-
-//    var movieAdapter = MovieAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

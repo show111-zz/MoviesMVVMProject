@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
 import com.example.moviesmvvmproject.R
 
-class MainFragment : Fragment(){
+class MainFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -21,11 +21,9 @@ class MainFragment : Fragment(){
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
         view.findViewById<Button>(R.id.btn_jump)?.setOnClickListener {
             view.findNavController().navigate(R.id.action_mainFragment_to_destinationFragment)
         }
-
     }
 
 }

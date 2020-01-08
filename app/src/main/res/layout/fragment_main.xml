@@ -8,12 +8,15 @@
     android:background="@color/colorPrimary"
     tools:context=".movie.view.MainActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/movieTitleRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
     <Button
         android:id="@+id/btn_jump"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
         android:text="@string/app_name"/>
-
-
 </RelativeLayout>

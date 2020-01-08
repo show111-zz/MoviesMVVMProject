@@ -18,5 +18,4 @@ class MovieModelImpl @Inject constructor() : MovieModel() {
             .map { it.results }
     }
 
-
 }
