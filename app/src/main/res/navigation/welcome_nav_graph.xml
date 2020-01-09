@@ -6,20 +6,36 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.moviesmvvmproject.movie.navigation.MainFragment"
-        android:label="fragment_main"
-        tools:layout="@layout/fragment_main">
+        android:name="com.example.moviesmvvmproject.movie.navigation.MovieMainFragment"
+        android:label="Fragment_Main"
+        app:defaultNavHost="true"
+        tools:layout="@layout/fragment_movie_main">
         <action
             android:id="@+id/action_mainFragment_to_destinationFragment"
             app:destination="@id/destinationFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/destinationFragment"
-        android:name="com.example.moviesmvvmproject.movie.navigation.DestinationFragment"
-        android:label="fragment_destination"
-        tools:layout="@layout/fragment_destination" />
-    <argument
-        android:name="nameToShow"
-        android:defaultValue="Hannah"
-        app:argType="string" />
+        android:name="com.example.moviesmvvmproject.movie.navigation.MovieDetailFragment"
+        android:label="Fragment_Destination"
+        tools:layout="@layout/fragment_movie_detail" >
+
+        <argument
+            android:name="movieTitle"
+            android:defaultValue="Movies"
+            app:argType="string" />
+
+        <argument
+            android:name="posterUrl"
+            android:defaultValue="URL"
+            app:argType="string" />
+
+        <argument
+            android:name="description"
+            android:defaultValue="Description"
+            app:argType="string" />
+
+    </fragment>
+
 </navigation>

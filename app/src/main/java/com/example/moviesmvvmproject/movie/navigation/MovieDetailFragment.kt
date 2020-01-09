@@ -4,26 +4,32 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import androidx.fragment.app.Fragment
-import androidx.navigation.findNavController
+import androidx.navigation.fragment.navArgs
 import com.example.moviesmvvmproject.R
+import kotlinx.android.synthetic.main.fragment_movie_detail.*
 
-class MainFragment : Fragment() {
+class MovieDetailFragment : Fragment() {
+
+    private val args by navArgs<MovieDetailFragmentArgs>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_main, container, false)
+        return inflater.inflate(R.layout.fragment_movie_detail, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.btn_jump)?.setOnClickListener {
-            view.findNavController().navigate(R.id.action_mainFragment_to_destinationFragment)
-        }
+
+        movieTitle.text = args.movieTitle
+        movieDescription.text = args.description
+//        Glide.with(this)
+//            .load(args.posterUrl)
+//            .into(imgPoster)
     }
+
 
 }
