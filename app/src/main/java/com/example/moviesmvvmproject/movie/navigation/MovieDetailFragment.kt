@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
+import com.bumptech.glide.Glide
 import com.example.moviesmvvmproject.R
+import com.example.moviesmvvmproject.http.ApiStores.Companion.IMAGE_PREVIOUS_URL
 import kotlinx.android.synthetic.main.fragment_movie_detail.*
 
 class MovieDetailFragment : Fragment() {
@@ -26,9 +28,9 @@ class MovieDetailFragment : Fragment() {
 
         movieTitle.text = args.movieTitle
         movieDescription.text = args.description
-//        Glide.with(this)
-//            .load(args.posterUrl)
-//            .into(imgPoster)
+        Glide.with(this)
+            .load(IMAGE_PREVIOUS_URL+args.posterUrl)
+            .into(imgPoster)
     }
 
 

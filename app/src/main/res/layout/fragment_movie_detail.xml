@@ -9,7 +9,7 @@
         android:id="@+id/imgPoster"
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:background="@mipmap/ic_launcher" />
+        android:scaleType="centerInside"/>
 
     <TextView
         android:id="@+id/movieTitle"
