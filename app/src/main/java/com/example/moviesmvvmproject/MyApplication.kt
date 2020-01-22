@@ -2,6 +2,8 @@ package com.example.moviesmvvmproject
 
 import android.app.Activity
 import android.app.Application
+import com.example.moviesmvvmproject.movie.di.ActivityBindings
+import com.example.moviesmvvmproject.movie.di.FragmentBindings
 import com.example.moviesmvvmproject.movie.di.MovieModule
 import dagger.BindsInstance
 import dagger.Component
@@ -34,7 +36,9 @@ class MyApplication : Application(), HasActivityInjector{
 @Component(
     modules = [
         AndroidInjectionModule::class,
-        MovieModule::class
+        MovieModule::class,
+        ActivityBindings::class,
+        FragmentBindings::class
     ]
 )
 interface MyAppComponent: AndroidInjector<MyApplication> {
