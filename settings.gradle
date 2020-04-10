@@ -1,2 +1,2 @@
-include ':app'
+include ':app', ':library:networks', ':feature:feature-detail', ':feature:feature-home'
 rootProject.name='MoviesMVVMProject'

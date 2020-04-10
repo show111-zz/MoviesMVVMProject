@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/destinationDetailFragment"
+    android:id="@+id/detail_feature_graph">
+
+    <fragment
+        android:id="@+id/destinationDetailFragment"
+        android:name="com.example.test.feature_detail.view.MovieDetailFragment"
+        android:label="Fragment_Destination"
+        tools:layout="@layout/fragment_movie_detail" >
+        <argument
+            android:name="movieId"
+            android:defaultValue="0"
+            app:argType="integer" />
+
+    </fragment>
+
+</navigation>
